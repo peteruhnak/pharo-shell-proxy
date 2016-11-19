@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfSocketShell",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfSocketShell",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }
