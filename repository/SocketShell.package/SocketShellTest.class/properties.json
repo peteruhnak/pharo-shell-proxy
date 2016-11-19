@@ -1,0 +1,14 @@
+{
+	"category" : "SocketShell-Tests",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"shell" ],
+	"name" : "SocketShellTest",
+	"pools" : [
+		 ],
+	"super" : "TestCase",
+	"type" : "normal" }

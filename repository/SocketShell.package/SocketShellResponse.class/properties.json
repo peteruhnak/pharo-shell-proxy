@@ -1,0 +1,16 @@
+{
+	"category" : "SocketShell",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"stdout",
+		"stderr",
+		"exitCode" ],
+	"name" : "SocketShellResponse",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"category" : "SocketShell",
+	"classinstvars" : [
+		"proxyDirectory" ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 11/19/2016 15:33",
+	"instvars" : [
+		"socket" ],
+	"name" : "SocketShell",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
