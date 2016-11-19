@@ -1,3 +1,3 @@
 converting
 encodeCommand: anArray
-	^ (STON toJsonString: anArray) base64Encoded
+	^ (NeoJSONWriter toString: anArray) base64Encoded
