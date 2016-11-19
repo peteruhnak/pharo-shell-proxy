@@ -5,7 +5,9 @@ This is a small utility for Windows that can execute external (shell) commands, 
 It contains a small Python server that executes (shell) commands via python's subprocess.
 Pharo communicates with the server through sockets, thus avoiding broken OSProcess/ProcessWrapper libraries.
 
-Created mainly to cooperate with git command, so not really tested (WorksForMe™).
+Created mainly to cooperate with git command, so not really tested (WorksForMe™), but it feels much, much faster than ProcessWrapper.
+
+Server's execution is logged in case something will fuck up.
 
 ## Example
 
@@ -31,7 +33,9 @@ Metacello new
     load
 ```
 
-Upon installation `SocketShell class>>initialize` will override `MCFileTreeGitRepository class>>runProcessWrapperGitCommand:in:` to use `SocketShell` instead.
+Upon the first use the system will ask you for the location of the directory containing the `proxy.py` (`port.txt` with port number of the server will be created there).
+
+During installation `SocketShell class>>initialize` will override `MCFileTreeGitRepository class>>runProcessWrapperGitCommand:in:` to use `SocketShell` instead.
 If you installed `GitFileTree` after `SocketShell`, then you need to manually reinitialize the `SocketShell` class.
 
 The Python server `proxy.py` has to be started separately (for painfully obvious reasons not from Pharo).
