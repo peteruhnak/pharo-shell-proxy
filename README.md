@@ -1,11 +1,11 @@
 # Pharo Shell Socket Proxy
 
-This is a small utility for Windows partially replacing ProcessWrapper.
+This is a small utility for Windows that can execute external (shell) commands, thus partially replacing ProcessWrapper.
 
 It contains a small Python server that executes (shell) commands via python's subprocess.
 Pharo communicates with the server through sockets, thus avoiding broken OSProcess/ProcessWrapper libraries.
 
-Created mainly to cooperate with git command, so not really tested.
+Created mainly to cooperate with git command, so not really tested (WorksForMe™).
 
 ## Example
 
