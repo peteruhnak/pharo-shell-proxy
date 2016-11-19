@@ -1,7 +1,7 @@
 actions
-command: aString
+command: anArray
 	| request response |
-	request := self encodeCommand: aString.
+	request := self encodeCommand: anArray.
 	response := self decodeResponse: (self rawCommand: request).
 	^ SocketShellResponse new
 		exitCode: (response at: #exitCode);
