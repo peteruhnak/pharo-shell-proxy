@@ -101,7 +101,7 @@ class ShellServer(object):
         # data is B64(JSON(command))
         logging.info('Processing command...')
         logging.debug('base64: %s', data)
-        jsonString = b64decode(data+'213')
+        jsonString = b64decode(data)
         logging.debug('json: %s', jsonString)
         command = json.loads(jsonString)
         response = self.runCommand(command)
