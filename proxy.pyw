@@ -2,7 +2,7 @@
 # socket proxy to run shell commands from Pharo
 # mainly for Windows, because ProcessWrapper is just broken and I am tired
 
-from subprocess import Popen,PIPE
+from subprocess import Popen,PIPE,STARTUPINFO,STARTF_USESHOWWINDOW
 import os
 import sys
 import json
@@ -112,7 +112,10 @@ class ShellServer(object):
     #/def
 
     def runCommand(self, args):
-        p = Popen(args, stdout=PIPE, stderr=PIPE)
+        # avoid popping up window
+        info = STARTUPINFO()
+        info.dwFlags |= STARTF_USESHOWWINDOW
+        p = Popen(args, stdout=PIPE, stderr=PIPE, startupinfo=info)
         out, err = p.communicate()
         code = p.returncode
         return {'exitCode':code, 'stdout':out, 'stderr':err}
