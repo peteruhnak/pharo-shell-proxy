@@ -5,8 +5,9 @@
 import os
 import sys
 import socket
+import tempfile
 
-PORT_FILE = sys.path[0] + '\port.txt'
+PORT_FILE = tempfile.gettempdir() + '\pharo-shell-proxy-port.txt'
 
 def stop_server():
     if not os.path.isfile(PORT_FILE):

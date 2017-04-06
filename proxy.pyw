@@ -11,6 +11,7 @@ from base64 import b64encode, b64decode
 import threading
 import logging
 from datetime import datetime
+import tempfile
 
 def configure_logging():
     logDir = sys.path[0] + '\logs'
@@ -26,8 +27,7 @@ def configure_logging():
 
 configure_logging()
 
-
-PORT_FILE = sys.path[0] + '\port.txt'
+PORT_FILE = tempfile.gettempdir() + '\pharo-shell-proxy-port.txt'
 
 class ShellServer(object):
     def __init__(self, host, port):
